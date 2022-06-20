@@ -13,11 +13,11 @@ Hello, this is Jinhwan Seo pursuing master degree(Artificial Intelligence) at PO
 News
 ======
 * Our team won 1st and 2nd place in WSOL and WSSS at [CVPR2020 LID challenge](https://lidchallenge.github.io/).  
-* Our paper accepted at [ICCV19](https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf).
+* Our paper accepted at [ICCV19](/publication/2019-smallobject).
 
 Publications
 ======
-* Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection  
+* Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection. ICCV2019.
 [[paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf)
 
 Awards
