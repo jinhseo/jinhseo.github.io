@@ -24,4 +24,3 @@ Awards
 ======
 * [LID Challenge - WSSS(2020)](https://lidchallenge.github.io/) (2nd place)  
 * [LID Challenge - WSOL(2020)](https://lidchallenge.github.io/) (1st place)  
-* Software hut prize from IBM(2015) (Best awards)
