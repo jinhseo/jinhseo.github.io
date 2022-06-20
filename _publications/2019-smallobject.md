@@ -1,7 +1,7 @@
 ---
 title: "Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection"
 collection: publications
-permalink: /publication/2019-smallobjectdetection
+permalink: /publication/2019-smallobject
 year: 2019
 venue: 'Proceedings of the IEEE/CVF International Conference on Computer Vision'
 authors: 'Noh, Junhyug and Bae, Wonho and Lee, Wonhee and <u>Seo, Jinhwan</u> and Kim, Gunhee'
