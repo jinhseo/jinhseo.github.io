@@ -17,7 +17,7 @@ News
 
 Publications
 ======
-* Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection. ICCV2019.
+* Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection. ICCV2019.  Junhyug Noh, Wonho Bae, Wonhee Lee, <u>Jinhwan Seo<\u>, and Gunhee Kim  
 [[paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf)
 
 Awards
