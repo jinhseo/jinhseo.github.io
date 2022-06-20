@@ -1,10 +1,10 @@
 ---
-title: "Better to Follow, Follow to Be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection"
+title: "Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild"
 collection: publications
-permalink: /publication/2019-smallobject
-year: 2019
-venue: 'Proceedings of the IEEE/CVF International Conference on Computer Vision'
-authors: 'Noh, Junhyug and Bae, Wonho and Lee, Wonhee and Seo, Jinhwan and Kim, Gunhee'
-paperurl: 'https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf'
-bibtex: "@InProceedings{Noh_2019_ICCV,\n author = \"Noh, Junhyug and Bae, Wonho and Lee, Wonhee and Seo, Jinhwan and Kim, Gunhee\",\n title = "Better to Follow, Follow to Be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection\",\n booktitle = \"Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)\",\n year = \"2019\"\n}\n"
+permalink: /publication/2020-wu2020unsupervised
+year: 2020
+venue: 'Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition'
+authors: 'Wu, Shangzhe and Rupprecht, Christian and Vedaldi, Andrea'
+paperurl: 'http://openaccess.thecvf.com/content_CVPR_2020/papers/Wu_Unsupervised_Learning_of_Probably_Symmetric_Deformable_3D_Objects_From_Images_CVPR_2020_paper.pdf'
+bibtex: "@inproceedings{wu2020unsupervised,\n    author = \"Wu, Shangzhe and Rupprecht, Christian and Vedaldi, Andrea\",\n    title = \"Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild\",\n    booktitle = \"Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition\",\n    year = \"2020\"\n}\n"
 ---
