@@ -1,15 +1,8 @@
 ---
-title: "Paper Title Number 1"
+title: "Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
----
-This paper is about the number 1. The number 2 is left for future work.
-
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
-
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+permalink: /publication/2019-smallobjectdetection
+year: 2019
+venue: 'Proceedings of the IEEE/CVF International Conference on Computer Vision'
+authors: 'Noh, Junhyug and Bae, Wonho and Lee, Wonhee and <u>Seo, Jinhwan</u> and Kim, Gunhee'
+paperurl: 'https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf'
