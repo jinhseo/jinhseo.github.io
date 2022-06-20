@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Hello, this is Jinhwan Seo pursuing master degree(Artificial Intelligence) at POSTECH. My research objectives are in computer vision and machine learning. I am primilarily interested in visual recognition techniques with less supervision, such as weakly supervised and semi-supervised learning. My future research topics brodaly include learning from noisy or limited data, and also application of perceptual intelligence on robotics.
+Hello, this is Jinhwan Seo pursuing master degree(Artificial Intelligence) at POSTECH.  
+I am primilarily interested in visual recognition techniques with less supervision, such as weakly supervised and semi-supervised learning.
+My future research topics brodaly include learning from noisy or limited data, and also application of perceptual intelligence on robotics.
 
 News
 ======
