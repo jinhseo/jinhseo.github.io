@@ -1,6 +1,5 @@
 ---
-title: "Better to Follow, Follow to Be Better: Towards Precise Supervision of Feature
-Super-Resolution for Small Object Detection"
+title: "Better to Follow, Follow to Be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection"
 collection: publications
 permalink: /publication/2019-smallobject
 year: 2019
