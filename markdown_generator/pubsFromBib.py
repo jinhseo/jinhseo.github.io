@@ -1,47 +1,14 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Publications markdown generator for academicpages
-# 
-# Takes a set of bibtex of publications and converts them for use with [academicpages.github.io](academicpages.github.io). This is an interactive Jupyter notebook ([see more info here](http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html)). 
-# 
-# The core python code is also in `pubsFromBibs.py`. 
-# Run either from the `markdown_generator` folder after replacing updating the publist dictionary with:
-# * bib file names
-# * specific venue keys based on your bib file preferences
-# * any specific pre-text for specific files
-# * Collection Name (future feature)
-# 
-# TODO: Make this work with other databases of citations, 
-# TODO: Merge this with the existing TSV parsing solution
-
-
-from pybtex.database.input import bibtex
-import pybtex.database.input.bibtex 
-from time import strptime
-import string
-import html
+import pybtex.database
+from pybtex.database import BibliographyData
 import os
-import re
+import codecs
 
-#todo: incorporate different collection types rather than a catch all publications, requires other changes to template
-publist = {
-    "proceeding": {
-        "file" : "proceedings.bib",
-        "venuekey": "booktitle",
-        "venue-pretext": "In the proceedings of ",
-        "collection" : {"name":"publications",
-                        "permalink":"/publication/"}
-        
-    },
-    "journal":{
-        "file": "pubs.bib",
-        "venuekey" : "journal",
-        "venue-pretext" : "",
-        "collection" : {"name":"publications",
-                        "permalink":"/publication/"}
-    } 
-}
+bib_data = pybtex.database.parse_file('publications.bib')
+
+# YAML is very picky about how it takes a valid string,
+# so we are replacing single and double quotes (and ampersands)
+# with their HTML encoded equivalents. This makes them look not
+# so readable in raw format, but they are parsed and rendered nicely.
 
 html_escape_table = {
     "&": "&amp;",
@@ -49,112 +16,63 @@ html_escape_table = {
     "'": "&apos;"
     }
 
+
 def html_escape(text):
     """Produce entities within text."""
     return "".join(html_escape_table.get(c,c) for c in text)
 
 
-for pubsource in publist:
-    parser = bibtex.Parser()
-    bibdata = parser.parse_file(publist[pubsource]["file"])
+# ## Creating the markdown files
+# 
+# This is where the heavy lifting is done.
+# This loops through all the publications,
+# then starts to concatentate a big string (```md```)
+# that contains the markdown for each type. It does the
+# YAML metadata first, then does the description for the
+# individual page. If you don't want something to appear
+# (like the "Recommended citation")
 
-    #loop through the individual references in a given bibtex file
-    for bib_id in bibdata.entries:
-        #reset default date
-        pub_year = "1900"
-        pub_month = "01"
-        pub_day = "01"
-        
-        b = bibdata.entries[bib_id].fields
-        
-        try:
-            pub_year = f'{b["year"]}'
+for key, bib_item in bib_data.entries.items():
+    print(key)
+    fields = bib_item.fields
+    md_filename = fields['year'] + '-' + key + ".md"
+    html_filename = fields['year'] + '-' + key
 
-            #todo: this hack for month and day needs some cleanup
-            if "month" in b.keys(): 
-                if(len(b["month"])<3):
-                    pub_month = "0"+b["month"]
-                    pub_month = pub_month[-2:]
-                elif(b["month"] not in range(12)):
-                    tmnth = strptime(b["month"][:3],'%b').tm_mon   
-                    pub_month = "{:02d}".format(tmnth) 
-                else:
-                    pub_month = str(b["month"])
-            if "day" in b.keys(): 
-                pub_day = str(b["day"])
+    if 'booktitle' in fields:
+        venue_str = html_escape(fields['booktitle'])
+    elif 'journal' in fields:
+        venue_str = html_escape(fields['journal'])
+    else:
+        print('Could not find venue for ' + key + '!')
 
-                
-            pub_date = pub_year+"-"+pub_month+"-"+pub_day
-            
-            #strip out {} as needed (some bibtex entries that maintain formatting)
-            clean_title = b["title"].replace("{", "").replace("}","").replace("\\","").replace(" ","-")    
+    if 'url' in fields:
+        url_str = fields['url']
+        bib_item.fields._dict.pop('url')  # hack because their dict does not support del
+        bib_item.fields.order.remove('url')  # remove url to not have it in the displayed bibtex
+    else:
+        url_str = None
+    citation = BibliographyData(entries={key: bib_item})
+    citation_str = citation.to_string("bibtex")
+    citation_str = citation_str.encode("unicode_escape").decode("utf-8")
+    citation_str = citation_str.translate(str.maketrans({'"':  "\\\""}))
+    
+    authors = ' and '.join([str(c) for c in bib_item.persons['author']])
+    
+    ## YAML variables
+    
+    md = "---\ntitle: \"" + html_escape(fields['title']) + '"\n'
+    md += """collection: publications"""
+    md += """\npermalink: /publication/""" + html_filename
+    md += "\nyear: " + fields['year']
+    md += "\nvenue: '" + venue_str + "'"
+    md += "\nauthors: '" + html_escape(authors) + "'"
+    
+    if url_str:
+        md += "\npaperurl: '" + url_str + "'"
 
-            url_slug = re.sub("\\[.*\\]|[^a-zA-Z0-9_-]", "", clean_title)
-            url_slug = url_slug.replace("--","-")
+    md += "\nbibtex: \"" + citation_str + "\""
+    md += "\n---"
 
-            md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
-            html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
-
-            #Build Citation from text
-            citation = ""
-
-            #citation authors - todo - add highlighting for primary author?
-            for author in bibdata.entries[bib_id].persons["author"]:
-                citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
-
-            #citation title
-            citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
-
-            #add venue logic depending on citation type
-            venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
-
-            citation = citation + " " + html_escape(venue)
-            citation = citation + ", " + pub_year + "."
-
-            
-            ## YAML variables
-            md = "---\ntitle: \""   + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + '"\n'
-            
-            md += """collection: """ +  publist[pubsource]["collection"]["name"]
-
-            md += """\npermalink: """ + publist[pubsource]["collection"]["permalink"]  + html_filename
-            
-            note = False
-            if "note" in b.keys():
-                if len(str(b["note"])) > 5:
-                    md += "\nexcerpt: '" + html_escape(b["note"]) + "'"
-                    note = True
-
-            md += "\ndate: " + str(pub_date) 
-
-            md += "\nvenue: '" + html_escape(venue) + "'"
-            
-            url = False
-            if "url" in b.keys():
-                if len(str(b["url"])) > 5:
-                    md += "\npaperurl: '" + b["url"] + "'"
-                    url = True
-
-            md += "\ncitation: '" + html_escape(citation) + "'"
-
-            md += "\n---"
-
-            
-            ## Markdown description for individual page
-            if note:
-                md += "\n" + html_escape(b["note"]) + "\n"
-
-            if url:
-                md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n" 
-            else:
-                md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
-
-            md_filename = os.path.basename(md_filename)
-
-            with open("../_publications/" + md_filename, 'w') as f:
-                f.write(md)
-            print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
-        # field may not exist for a reference
-        except KeyError as e:
-            print(f'WARNING Missing Expected Field {e} from entry {bib_id}: \"', b["title"][:30],"..."*(len(b['title'])>30),"\"")
-            continue
+    md_filename = os.path.basename(md_filename)
+    with codecs.open("../_publications/" + md_filename, 'w', "utf-8") as f:
+        f.write(md)
