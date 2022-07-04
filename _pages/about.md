@@ -17,7 +17,7 @@ News
 ======
 * Our paper accepted at [ECCV2022](/publication/2022-wsod)
 * Our team won 1st and 2nd place in WSOL and WSSS at [LID challenge](https://lidchallenge.github.io/).  
-* Our paper accepted at [ICCV19](/publication/2019-Noh_2019_ICCV.md).
+* Our paper accepted at [ICCV19](/publication/2019-Noh_2019_ICCV).
 
 Publications
 ======
