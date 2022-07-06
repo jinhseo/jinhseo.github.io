@@ -8,14 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-Hello:wave:, I am master student of Artificial Intelligence at POSTECH, working on machine learning and computer vision.
+Hello:wave:, I am master's student of Artificial Intelligence at POSTECH, working on machine learning and computer vision.
 I am primilarily focus on visual recognition techniques with less supervision such as weakly and semi-supervised learning.
 I am also interested in learning from noisy or limited data and perceptual intelligence for robotics.
 <!---It leads me to think about follow-up research directions: 1. Learning from noisy labels 2. Perceptual intelligence for robotics.-->
 
 News
 ======
-* Our paper accepted a [ECCV2022](/publication/2022-wsod)
+* Our paper accepted at [ECCV2022](/publication/2022-wsod)
 * Our team won 1st and 2nd place in WSOL and WSSS at [LID challenge](https://lidchallenge.github.io/).  
 * Our paper accepted at [ICCV19](/publication/2019-Noh_2019_ICCV).
 
