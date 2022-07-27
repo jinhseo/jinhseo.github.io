@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="MonoSDF: Exploring Monocular Geometric Cues for Neural Implicit Surface Reconstruction">
-  <meta name="keywords" content="MonoSDF, Neural Implicit Surface Reconstruction, Monocular Geometric Cues ">
+        content="Object Discovery via Contrastive Learning for Weakly Supervised Object Detection">
+  <meta name="keywords" content="Weakly Supervised Learning, Object Detection, Contrastive Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MonoSDF</title>
+  <title>OD-WSCL</title>
 
   <!-- Bootstrap -->
   <link href="static/css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -53,38 +53,38 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title" style="margin-bottom: 0"><strong>MonoSDF</strong></h1>
-          <h2 class="title is-2 publication-title" style="margin-top: 0; margin-bottom: 0">Exploring Monocular Geometric Cues for </h2>
-          <h2 class="title is-2 publication-title" style="margin-top: 0">Neural Implicit Surface Reconstruction</h2>
+          <!-- <h1 class="title is-1 publication-title" style="margin-bottom: 0"><strong>MonoSDF</strong></h1>-->
+          <h2 class="title is-2 publication-title" style="margin-top: 0; margin-bottom: 0">Object Discovery via Contrastive Learning for </h2>
+          <h2 class="title is-2 publication-title" style="margin-top: 0">Weakly Supervised Object Detection</h2>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://niujinshuchong.github.io/">Zehao Yu</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://jinhseo.github.io/">Jinhwan Seo</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://pengsongyou.github.io/">Songyou Peng</a><sup>2,3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://won-bae.github.io/">Wonho Bae</a><sup>2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://m-niemeyer.github.io/">Michael Niemeyer</a><sup>1,3</sup>
+              <a href="https://djsutherland.ml/">Danica J. Sutherland</a><sup>2,3</sup>
             </span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://tsattler.github.io/">Torsten Sattler</a><sup>4</sup>
+              <a href="https://junhyug.github.io/">Junhyug Noh</a><sup>4</sup>
             </span>&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="http://www.cvlibs.net/">Andreas Geiger</a><sup>1,3</sup>
+              <a href="http://imlab.postech.ac.kr/members_d.htm">Daijin Kim</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Tübingen</span>&nbsp;&nbsp;&nbsp;&nbsp;
-            <span class="author-block"><sup>2</sup>ETH Zurich</span>&nbsp;&nbsp;&nbsp;&nbsp;
-            <span class="author-block"><sup>3</sup>MPI for Intelligent Systems, Tübingen</span>
-            <span class="author-block"><sup>4</sup>Czech Technical University in Prague</span>
+            <span class="author-block"><sup>1</sup>POSTECH</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>University of British Columbia</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>Alberta Machine Intelligence Institute</span>
+            <span class="author-block"><sup>4</sup>Lawrence Livermore National Laboratory</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2206.00665.pdf"
+                <a href="https://jinhseo.github.io/research/wsod.html"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -117,7 +117,7 @@
               -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/autonomousvision/monosdf"
+                <a href="https://github.com/jinhseo/OD-WSCL"
                    class="external-link button is-normal is-rounded is-dark disabled">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -146,20 +146,19 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./resources/teaser_with_dataset.mp4"
                 type="video/mp4">
-      </video>
+      </video> 
       <h2 class="subtitle has-text-centered" style="margin-top: 15px">
         TL;DR: We demonstrate that state-of-the-art depth and normal cues extracted from monocular images are complementary to reconstruction cues and hence significantly improve the performance of implicit surface reconstruction methods.
-        <!-- TL;DR: <span class="dnerf">MonoSDF</span> explore the utility of monocular geometric cues for improving neural implicit surface reconstruction. -->
       </h2>
     </div>
   </div>
-</section>
+</section>-->
 
 <!--
 <section class="section">
@@ -191,15 +190,12 @@
         <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In recent years, neural implicit surface reconstruction methods have become popular for multi-view 3D reconstruction.
-            In contrast to traditional multi-view stereo methods, these approaches tend to produce smoother and more complete reconstructions due to the inductive smoothness bias of neural networks.
-            State-of-the-art neural implicit methods allow for high-quality reconstructions of simple scenes from many input views. 
-            Yet, their performance drops significantly for larger and more complex scenes and scenes captured from sparse viewpoints.
-            This is caused primarily by the inherent ambiguity in the RGB reconstruction loss that does not provide enough constraints, in particular in less-observed and textureless areas. 
-            Motivated by recent advances in the area of monocular geometry prediction, we systematically explore the utility these cues provide for improving neural implicit surface reconstruction. 
-            We demonstrate that depth and normal cues, predicted by general-purpose monocular estimators, significantly improve reconstruction quality and optimization time.
-            Further, we analyse and investigate multiple design choices for representing neural implicit surfaces, ranging from monolithic MLP models over single-grid to multi-resolution grid representations.
-            We observe that geometric monocular priors improve performance both for small-scale single-object as well as large-scale multi-object scenes, independent of the choice of representation.  
+            Weakly Supervised Object Detection (WSOD) is a task that detects objects in an image using a model trained only on image-level annotations.
+				    Current state-of-the-art models benefit from self-supervised instance-level supervision, but since weak supervision does not include count or location information, the most common ``argmax'' labeling method often ignores many instances of objects.
+				    To alleviate this issue, we propose a novel multiple instance labeling method called <i>object discovery</i>.
+				    We further introduce a new contrastive loss under weak supervision where no instance-level information is available for sampling, called <i>weakly supervised contrastive loss</i> (WSCL).
+				    WSCL aims to construct a credible similarity threshold for object discovery by leveraging consistent features for embedding vectors in the same class.
+				    As a result, we achieve new state-of-the-art results on MS-COCO 2014 and 2017 as well as PASCAL VOC 2012, and competitive results on PASCAL VOC 2007.
           </p>
         </div>
       </div>
@@ -235,9 +231,11 @@
         <img src="./resources/method.svg" class="center">
         <div class="content has-text-justified">
           <p style="margin-top: 30px">
-            We use monocular geometric cues predicted by a general-purpose pretrained network to guide the optimization of neural implicit surface models. 
-            More specifically, for a batch of rays, we volume render predicted RGB colors, depth, and normals, and optimize wrt. the input RGB images and monocular geometric cues. 
-            Further, we investigate different design choices for neural implicit architectures and provide an in-depth analysis. 
+            We introduce a novel multiple instance labeling method which addresses the limitations of current labeling methods in WSOD.
+            Our proposed object discovery module explores all proposed candidates using a similarity measure to the highest-scoring representation.
+            We further suggest a weakly supervised contrastive loss (WSCL) to set a reliable similarity threshold.
+            WSCL encourages a model to learn similar features for objects in the same class, and to learn discriminative features for objects in different classes.
+            To make sure the model learn appropriate features, we provide a large number of positive and negative instances for WSCL through three feature augmentation methods suitable for WSOD.
           </p>
         </div>
 
