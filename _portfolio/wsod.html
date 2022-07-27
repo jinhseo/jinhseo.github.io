@@ -239,41 +239,50 @@
 <body>
 
     <div class="content">
-			<h1>Using latent space regression to analyze and leverage compositionality in GANs</h1>
+			<h1>Object Discovery via Contrastive Learning for Weakly Supervised Object Detection</h1>
         <p id="authors">
-            <a href="http://people.csail.mit.edu/lrchai/">Lucy Chai</a>
-						<a href="http://people.csail.mit.edu/jwulff/">Jonas Wulff</a>
-            <a href="http://web.mit.edu/phillipi/">Phillip Isola</a><br>
+            <a href="https://jinhseo.github.io/">Jinhwan Seo</a>
+	    <a href="https://won-bae.github.io/">Wonho Bae</a>
+            <a href="https://djsutherland.ml/">Danica J. Sutherland</a>
+	    <a href="https://junhyug.github.io/">Junhyug Noh</a>
+	    <a href="http://imlab.postech.ac.kr/members_d.htm">Daijin Kim</a><br>
             <!-- <strong>MIT Computer Science and Artificial Intelligence Laboratory</strong> -->
-            MIT Computer Science and Artificial Intelligence Laboratory
-						<br><i>International Conference on Learning Representations 2021</i>
+            POSTECH, University of British Columbia, Lawrence Livermore National Laboratory
+	    <br><i>European Conference on Computer Vision 2022</i>
         </p>
 				<font size="+2">
 					<p style="text-align: center;">
-						<a href="http://arxiv.org/abs/2103.10426" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="https://github.com/chail/latent-composition" target="_blank">[Code]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://github.com/jinhseo/jinhseo.github.io/edit/master/_portfolio/wsod.html" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://github.com/jinhseo/OD-WSCL" target="_blank">[Code]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+						<!--
 						<a href="http://latent-composition.csail.mit.edu/presentations/latent_composition_poster.pdf" target="_blank">[Poster]</a> &nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="https://colab.research.google.com/drive/1p-L2dPMaqMyr56TYoYmBJhoyIyBJ7lzH?usp=sharing" target="_blank">[Colab]</a> &nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="bibtex.txt" target="_blank">[Bibtex]</a>
+						
+						<a href="bibtex.txt" target="_blank">[Bibtex]</a>-->
 						<!--
 						<a href="TODO: youtube link?" target="_blank">[Video]</a>
 						-->
 					</p>
 				</font>
-				<font size="+1">
+				<!--<font size="+1">
 					<p style="text-align: center;">
 						Skip to:  &nbsp;&nbsp;
 						<a href="#abstract">[Abstract]</a> &nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="#summary">[Summary]</a> &nbsp;&nbsp;&nbsp;&nbsp;
 						<a href="#samples">[Uncurated Samples]</a> &nbsp;&nbsp;&nbsp;&nbsp;
 					</p>
-				</font>
+				</font>-->
         <p>
             <img class='teaser-img' src='img/teaser.jpeg'></img>
         </p>
 
 				<p id="abstract"><strong>Abstract: </strong>
-				In recent years, Generative Adversarial Networks have become ubiquitous in both research and public perception, but how GANs convert an unstructured latent code to a high quality output is still an open question. In this work, we investigate regression into the latent space as a probe to understand the compositional properties of GANs. We find that combining the regressor and a pretrained generator provides a strong image prior, allowing us to create composite images from a collage of random image parts at inference time while maintaining global consistency. To compare compositional properties across different generators, we measure the trade-offs between reconstruction of the unrealistic input and image quality of the regenerated samples. We find that the regression approach enables more localized editing of individual image parts compared to direct editing in the latent space, and we conduct experiments to quantify this independence effect. Our method is agnostic to the semantics of edits, and does not require labels or predefined concepts during training. Beyond image composition, our method extends to a number of related applications, such as image inpainting or example-based image editing, which we demonstrate on several GANs and datasets, and because it uses only a single forward pass, it can operate in real-time. 
+				Weakly Supervised Object Detection (WSOD) is a task that detects objects in an image using a model trained only on image-level annotations.
+				Current state-of-the-art models benefit from self-supervised instance-level supervision, but since weak supervision does not include count or location information, the most common ``argmax'' labeling method often ignores many instances of objects.
+				To alleviate this issue, we propose a novel multiple instance labeling method called \textit{object discovery}.
+				We further introduce a new contrastive loss under weak supervision where no instance-level information is available for sampling, called \textit{weakly supervised contrastive loss} (WSCL).
+				WSCL aims to construct a credible similarity threshold for object discovery by leveraging consistent features for embedding vectors in the same class.
+				As a result, we achieve new state-of-the-art results on MS-COCO 2014 and 2017 as well as PASCAL VOC 2012, and competitive results on PASCAL VOC 2007.
 				</p>
 
         <br clear="all">
