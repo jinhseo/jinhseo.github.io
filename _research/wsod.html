@@ -263,79 +263,32 @@
             We evaluate the proposed method with other state-of-the-art algorithms on COCO14 and 17. Regardless of backbone and dataset, our method achieves the new state-of-the-art performance for all the evaluation metrics.
           </p>
         </div>
-        
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 autoplay
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 loop
-                 width="90%">
-            <source src="./resources/scannet.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-        <h3 class="title is-4">Tanks and Temples</h3>
+	 
+	<img src="./imgs/voc.png" class="center">
         <div class="content has-text-justified">
           <p>
-            We test our method on the Tanks and Temples dataset and compare to state-of-the-art methods. 
-            MonoSDF is the first neural implicit model achieving reasonable results on such a large-scale indoor scene.
-          </p>
-        </div>
-        
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 autoplay
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 loop
-                 width="90%">
-            <source src="./resources/TNT.mp4"
-                    type="video/mp4">
-          </video>
+            We also compare the performance of the state-of-the-art methods on VOC07 and 12 with both SS and MCG proposal methods. 
+	  </p>
         </div>
 
-        <h3 class="title is-4">DTU with <b>3 Input Views</b> </h3>
+ 
+
+        <h3 class="title is-4">Qualitative Results</h3>
+	<img src="./imgs/challenge.png" class="center">
         <div class="content has-text-justified">
           <p>
-            We test our method on the DTU dataset with <strong>only 3 input views</strong>. Our monocular geometric cues significantly boost the reconstruction results. 
+            We provide the qualitative results that show how our method addresses three main challenges of WSOD – part domination, grouped instances and missing objects, compared to OICR.
           </p>
         </div>
-        
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                  autoplay
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 loop
-                 width="90%">
-            <source src="./resources/DTU.mp4"
-                    type="video/mp4">
-          </video>
+        <img src="./imgs/pgt.png" class="center">
+        <div class="content has-text-justified">
+          <p>
+            As a result, we visualize the pseudo groundtruths captured by OICR, MIST and Ours. OICR selects only the top-scoring proposal per category ignoring all the other instances.
+	    Although multiple objects are captured by MIST, it also selects many false positives <i>e.g.</i>, object-like background. Ours successfully captures true positives.
+          </p>
         </div>
-
-        <h3 class="title is-4">Ablation on Replica</h3>
+        <img src="./imgs/qualitative.png" class="center">
         
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                  autoplay
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 loop
-                 width="90%">
-            <source src="./resources/ablation.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
 	<!--
         <h3 class="title is-4">Reconstructions</h3>
         <div class="embed-responsive embed-responsive-16by9">
@@ -349,7 +302,24 @@
   </div>
 </section>
 
+<section class="section" id="Reference & Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Reference & Acknowledgement</h2>
+    <pre><code>[1] Tang, P., Wang, X., Bai, X., Liu, W.: Multiple instance detection network with
+online instance classifier refinement. In: The IEEE Conference on Computer Vision
+and Pattern Recognition (CVPR) (July 2017)
+	[2] Ren, Z., Yu, Z., Yang, X., Liu, M.Y., Lee, Y.J., Schwing, A.G., Kautz, J.: Instanceaware,
+context-focused, and memory-efficient weakly supervised object detection.
+In: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+Recognition. pp. 10598–10607 (2020)
+    </code></pre>
+  </div>
+  We borrowed the main code from <a href="https://github.com/NVlabs/wetectron">wetectron</a>[2]. 
+  Thank you for sharing your great work!
+</section>
+	
 <section class="section" id="BibTeX">
+  If you find any helpful in our work, please consider cite:
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@inproceedings{seo2022od-wscl,
