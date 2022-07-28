@@ -228,7 +228,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3" style="margin-top: -20px">Method</h2>
 
-        <img src="./resources/method.svg" class="center">
+        <img src="./imgs/method.png" class="center">
         <div class="content has-text-justified">
           <p style="margin-top: 30px">
             We introduce a novel multiple instance labeling method which addresses the limitations of current labeling methods in WSOD.
@@ -255,11 +255,12 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Results</h2>
 
-
-        <h3 class="title is-4">ScanNet</h3>
+	
+        <h3 class="title is-4">Quantitative Results</h3>
+	<img src="./imgs/coco.png" class="center">
         <div class="content has-text-justified">
           <p>
-            We test our method on the ScanNet dataset and compare to state-of-the-art methods. Our approach achieves significantly better reconstruction results. 
+            We evaluate the proposed method with other state-of-the-art algorithms on COCO14 and 17. Regardless of backbone and dataset, our method achieves the new state-of-the-art performance for all the evaluation metrics.
           </p>
         </div>
         
@@ -335,13 +336,11 @@
                     type="video/mp4">
           </video>
         </div>
-
+	<!--
         <h3 class="title is-4">Reconstructions</h3>
-        
         <div class="embed-responsive embed-responsive-16by9">
-
           <iframe style="clip-path: inset(1px 1px)" src="https://sketchfab.com/playlists/embed?autostart=1&amp;autospin=0.25&amp;collection=abee3cc1a7a7436c804f2bd3aadc2acd" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
+        </div>-->
         
 
       </div>
@@ -356,7 +355,6 @@
     <pre><code>@inproceedings{seo2022od-wscl,
  author    = {Seo, Jinhwan and Bae, Wonho and Sutherland, Danica J. and Noh, Junhyug and Kim, Daijin},
  booktitle = {European Conference on Computer Vision (ECCV)},
- month = {10},
  title = {Object Discovery via Contrastive Learning for Weakly Supervised Object Detection},
  year = {2022}
 }</code></pre>
