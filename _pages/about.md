@@ -30,5 +30,4 @@ ICCV 2019 - [[paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh
 
 Awards
 ======
-* [LID Challenge](https://lidchallenge.github.io/) - WSSS (CVPR2020, 2nd place)
-* [LID Challenge](https://lidchallenge.github.io/) - WSOL (CVPR2020, 1st place)  
+* [LID Challenge](https://lidchallenge.github.io/) - WSOL(1st), WSSS(2nd) at CVPR 2022
