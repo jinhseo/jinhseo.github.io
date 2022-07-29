@@ -22,11 +22,11 @@ News
 Publications
 ======
 * Object Discovery via Contrastive Learning for Weakly Supervised Object Detection.  
-<u>Jinhwan Seo</u>, Wonho Bae, Danica J. Sutherland, Junhyug Noh, and Daijin Kim  
-**ECCV 2022**
+**Jinhwan Seo**, Wonho Bae, Danica J. Sutherland, Junhyug Noh, and Daijin Kim  
+ECCV 2022 - [[paper]](https://jinhseo.github.io/), [[project page]](https://jinhseo.github.io/research/wsod.html)
 * Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection.  
-Junhyug Noh, Wonho Bae, Wonhee Lee, <u>Jinhwan Seo</u>, and Gunhee Kim  
-**ICCV 2019** - [[paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf)
+Junhyug Noh, Wonho Bae, Wonhee Lee, **Jinhwan Seo**, and Gunhee Kim  
+ICCV 2019 - [[paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf)
 
 Awards
 ======
