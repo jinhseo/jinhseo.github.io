@@ -15,7 +15,7 @@ I am also interested in learning from noisy data and perceptual intelligence for
 
 News
 ======
-* (07/2022) Our paper accepted at [ECCV 2022](/publication/2022-wsod).
+* (07/2022) Our paper accepted at [ECCV 2022](/publication/2022-Seo_2022_ECCV).
 * (06/2020) Our team won 1st and 2nd place in WSOL and WSSS at [LID challenge](https://lidchallenge.github.io/).  
 * (07/2019) Our paper accepted at [ICCV 2019](/publication/2019-Noh_2019_ICCV).
 
