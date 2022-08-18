@@ -20,7 +20,6 @@ News
 * (07/2019) Our paper accepted at [ICCV 2019](/publication/2019-Noh_2019_ICCV).
 
 Publications
-### Conference paper
 ======
 * Object Discovery via Contrastive Learning for Weakly Supervised Object Detection.  
 **Jinhwan Seo**, Wonho Bae, Danica J. Sutherland, Junhyug Noh, Daijin Kim  
