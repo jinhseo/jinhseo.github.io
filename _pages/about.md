@@ -9,8 +9,8 @@ redirect_from:
 ---
 
 Hello:wave:, I am master's student of Artificial Intelligence at POSTECH, working on machine learning and computer vision.
-I am primilarily focus on visual recognition techniques with less supervision such as weakly and semi-supervised learning.
-I am also interested in learning from noisy data and perceptual intelligence for robotics.
+My research topics focus on visual recognition techniques with less supervision such as weakly/semi-supervised learning.
+I am also interested in learning from noisy data and 3D object recognition for robotics.
 <!---It leads me to think about follow-up research directions: 1. Learning from noisy labels 2. Perceptual intelligence for robotics.-->
 
 News
