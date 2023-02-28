@@ -8,13 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-Hello:wave:, I am a research intern at KIST, working on machine learning and computer vision.  
-
-My research goal is to design machines to learn and understand the world like humans.  
-It leads me to think about follow-up researches:
+<!--Hello:wave:, I am a research intern at KIST, working on machine learning and computer vision.-->
+Hello:wave:, I study machine learning and computer vision.  
+The goal of my research is to design machines to learn and understand the world like humans.  
+Research interest covers label-efficient approach, learning from noisy labels and 3D scene understanding.
+<!--It leads me to think about follow-up researches:
 1. Label-efficient learning
 2. Learning from noisy labels
-3. Depth estimation and 3D scene understanding
+3. Depth estimation and 3D scene understanding-->
 
 <!---My research topics focus on visual recognition techniques with data- and label-efficient approach.
 I am also interested in learning from noisy data and 3D object recognition for robotics.
