@@ -10,7 +10,7 @@ redirect_from:
 
 Hello:wave:, I am a research intern at KIST, working on machine learning and computer vision.  
 
-My research goal is to enable machine to learn and understand the world like human.  
+My research goal is to design machines to learn and understand the world like humans.  
 It leads me to think about follow-up researches:
 1. Label-efficient learning
 2. Learning from noisy labels
