@@ -12,12 +12,9 @@ redirect_from:
 Hello:wave:, I study machine learning and computer vision.  
 The goal of my research is to design machines to learn and understand the world like humans.  
 Research interest covers label-efficient approach, learning from noisy labels and 3D scene understanding.
-<!---It leads me to think about follow-up researches:
-1. Label-efficient learning
-2. Learning from noisy labels
-3. Depth estimation and 3D scene understanding-->
+<!--It leads me to think about follow-up researches:1. Label-efficient learning2. Learning from noisy labels3. Depth estimation and 3D scene understanding-->
 
-<!---My research topics focus on visual recognition techniques with data- and label-efficient approach.
+<!--My research topics focus on visual recognition techniques with data- and label-efficient approach.
 I am also interested in learning from noisy data and 3D object recognition for robotics.
 It leads me to think about follow-up research directions: 1. Learning from noisy labels 2. Perceptual intelligence for robotics.-->
 
