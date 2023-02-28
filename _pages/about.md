@@ -8,10 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-Hello:wave:, I am currently research intern at KIST, working on machine learning and computer vision.  
+Hello:wave:, I am a research intern at KIST, working on machine learning and computer vision.  
 
 My research goal is to enable machine to learn and understand the world like human.  
-It leads me to think about follow-up researches:  
+It leads me to think about follow-up researches:
 1. Label-efficient learning
 2. Learning from noisy labels
 3. Depth estimation and 3D scene understanding
