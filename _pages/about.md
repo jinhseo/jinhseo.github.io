@@ -28,60 +28,18 @@ News
 
 Publications
 ======
-
 * Object Discovery via Contrastive Learning for Weakly Supervised Object Detection.  
 **Jinhwan Seo**, Wonho Bae, Danica J. Sutherland, Junhyug Noh<sup>\*</sup>, Daijin Kim<sup>\*</sup>  
 ECCV 2022 - [paper](https://arxiv.org/pdf/2208.07576.pdf) | [project page](https://jinhseo.github.io/research/wsod.html) | [code](https://github.com/jinhseo/OD-WSCL)  
 <!--How can we find as many instances as possible in weakly supervised learning where we don't know how many instances in an image?  
 We introduced a novel approach to find ignored pseudo groundtruths via _object discovery_ module guided by contrastive learning for weakly supervised object detection.  -->
-<!--
-<td style="vertical-align: middle;"></td>
-<table>
-<tbody>
-<tr> <td width=20%><img style="float: middle; margin-right: 10px" src="/images/od-wscl.png" width="200px" height="120px"> </td>
-<td style="height=120px; vertical-align: top;">
-  <h4>Object Discovery via Contrastive Learning for Weakly Supervised Object Detection.</h4>
-  <b>Jinhwan Seo</b>, Wonho Bae, Danica J. Sutherland, Junhyug Noh*, Daijin Kim*<br>
-  ECCV 2022 - <a href="https://arxiv.org/pdf/2109.11048.pdf"> paper</a> | <a href="https://jinhseo.github.io/research/wsod.html"> project page</a> | <a href="https://github.com/jinhseo/OD-WSCL"> code</a>
-  <p>Can we find as many instances as possible in weakly supervised learning where we don't know how many instances in an image?  
-We introduced a novel approach to find undiscovered pseudo groundtruths via <i>object discovery</i> module guided by contrastive learning for weakly supervised object detection.<p></td>
-</tr>
-</tbody>
-</table>-->
-<!--
-<td style="vertical-align: middle;"></td>
-<table>
-<tbody>
-<tr> <td width=20%><img style="float: middle; margin-right: 10px" src="/images/rcam.png" width="200px" height="120px"> </td>
-<td style="height=120px; vertical-align: top;">
-  <h4>Revisiting Class Activation Mapping for Learning from Imperfect Data.</h4>
-  Wonho Bae*, Junhyug Noh*, <b>Jinhwan Seo</b>, Gunhee Kim  <br>
-  CVPRW 2020 - <a href="https://lidchallenge.github.io/papers/Track-3-1-lid_paper_snuvl.pdf"> paper</a>
-  <p>Why does the output of weakly supervised object localization only highlight the discriminative part of the object?  
-We investigated the phenomenon of part domination in weakly supervised learning and introduced effective way to address it.<p></td>
-</tr>
-</tbody>
-</table>-->
 
 * Revisiting Class Activation Mapping for Learning from Imperfect Data.  
 Wonho Bae<sup>\*</sup>, Junhyug Noh<sup>\*</sup>, **Jinhwan Seo**, Gunhee Kim  
 CVPRW 2020 - [paper](https://lidchallenge.github.io/papers/Track-3-1-lid_paper_snuvl.pdf)  
 <!--Why does the output of weakly supervised object localization only highlight the discriminative part of the object?  
 We investigated the phenomenon of part domination in weakly supervised learning and introduced effective way to address it.  -->
-<!--
-<td style="vertical-align: middle;"></td>
-<table>
-<tbody>
-<tr> <td width=20%><img style="float: middle; margin-right: 10px" src="/images/small.png" width="200px" height="120px"> </td>
-<td style="height=120px; vertical-align: top;">
-  <h4>Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection.</h4>
-  Junhyug Noh, Wonho Bae, Wonhee Lee, <b>Jinhwan Seo</b>, Gunhee Kim  <br>
-  ICCV 2019 - <a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf">paper</a>
-  <p>It is difficult to recognize small objects due to the lack of feature information or distortion by pooling layer. 
-We proposed feature super-resolution approach by providing a better supervision for SR model.<p></td>
-</tr>
-</tbody>
-</table>-->
+
 * Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection.  
 Junhyug Noh, Wonho Bae, Wonhee Lee, **Jinhwan Seo**, Gunhee Kim  
 ICCV 2019 - [paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.pdf)  
