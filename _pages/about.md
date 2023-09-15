@@ -26,7 +26,7 @@ News
 
 Publications
 ======
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2022</div><img src='images/od-wscl.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2022</div><img src='images/od-wscl.png' alt="sym" width="30%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Object Discovery via Contrastive Learning for Weakly Supervised Object Detection
