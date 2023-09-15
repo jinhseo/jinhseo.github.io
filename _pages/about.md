@@ -8,16 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-<!--Hello:wave:, I am a research intern at KIST, working on machine learning and computer vision.  -->
-Hello:wave:, I study machine learning and computer vision.  
+Hello:wave:, I am a research intern at KIST, working on computer vision and machine learning.
 
 My research goal is to design machines to learn and understand the world like humans.  
-<!--Research interest covers label-efficient approach, learning from noisy labels and 3D scene understanding.-->
-It leads me to think about follow-up researches: 1. Data- and Label-efficient learning 2. Learning from noisy labels 3. Depth estimation and 3D scene understanding
-
-<!--My research topics focus on visual recognition techniques with data- and label-efficient approach.
-I am also interested in learning from noisy data and 3D object recognition for robotics.
-It leads me to think about follow-up research directions: 1. Learning from noisy labels 2. Perceptual intelligence for robotics.-->
+It leads me to think about follow-up researches:  
+  1. Data- and Label-efficient Learning
+  2. Learning from Noisy Labels
+  3. Video Understanding
+  4. Perceptual Intelligence for Robotics
 
 News
 ======
@@ -28,6 +26,19 @@ News
 
 Publications
 ======
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2022</div><img src='images/od-wscl.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Object Discovery via Contrastive Learning for Weakly Supervised Object Detection
+
+**Jinhwan Seo**, Wonho Bae, Danica J. Sutherland, Junhyug Noh<sup>\*</sup>, Daijin Kim<sup>\*</sup>
+
+ECCV 2022 - [paper](https://arxiv.org/pdf/2208.07576.pdf) | [project page](https://jinhseo.github.io/research/wsod.html) | [code](https://github.com/jinhseo/OD-WSCL) | [bibtex]  
+TL;DR: How can we find as many instances as possible in weakly supervised learning where we don't know how many instances in an image?  
+We introduced a novel approach to find ignored pseudo groundtruths via _object discovery_ module guided by contrastive learning for weakly supervised object detection.
+</div>
+</div>
+
 * Object Discovery via Contrastive Learning for Weakly Supervised Object Detection.  
 **Jinhwan Seo**, Wonho Bae, Danica J. Sutherland, Junhyug Noh<sup>\*</sup>, Daijin Kim<sup>\*</sup>  
 ECCV 2022 - [paper](https://arxiv.org/pdf/2208.07576.pdf) | [project page](https://jinhseo.github.io/research/wsod.html) | [code](https://github.com/jinhseo/OD-WSCL)  
