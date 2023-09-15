@@ -1,0 +1,6 @@
+@inproceedings{bae2020revisiting,
+  title={Revisiting class activation mapping for learning from imperfect data},
+  author={Bae, Wonho and Noh, Junhyug and Kim, Jinhwan Seo Gunhee},
+  booktitle={Proceedings of the CVPR},
+  year={2020}
+}
