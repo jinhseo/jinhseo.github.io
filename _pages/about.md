@@ -27,7 +27,7 @@ News
 Publications
 ======
 * Object Discovery via Contrastive Learning for Weakly Supervised Object Detection.  
-**Jinhwan Seo**, Wonho Bae, Danica J. Sutherland, Junhyug Noh<sup>\*</sup>, Daijin Kim<sup>\*</sup>
+**Jinhwan Seo**, Wonho Bae, Danica J. Sutherland, Junhyug Noh<sup>\*</sup>, Daijin Kim<sup>\*</sup>  
 ECCV 2022 - [paper](https://arxiv.org/pdf/2208.07576.pdf) | [project page](https://jinhseo.github.io/research/wsod.html) | [code](https://github.com/jinhseo/OD-WSCL) | [bibtex](/files/od-wscl.txt)
   >### TL;DR: How can we find as many instances as possible in weakly supervised learning where we don't know how many instances in an image? We introduced a novel approach to find ignored pseudo groundtruths via _object discovery_ module guided by contrastive learning for weakly supervised object detection.  
 
