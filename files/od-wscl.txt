@@ -1,0 +1,8 @@
+@inproceedings{seo2022object,
+  title={Object discovery via contrastive learning for weakly supervised object detection},
+  author={Seo, Jinhwan and Bae, Wonho and Sutherland, Danica J and Noh, Junhyug and Kim, Daijin},
+  booktitle={European Conference on Computer Vision},
+  pages={312--329},
+  year={2022},
+  organization={Springer}
+}
