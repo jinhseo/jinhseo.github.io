@@ -35,7 +35,7 @@ ECCV 2022 - [paper](https://arxiv.org/pdf/2208.07576.pdf) | [project page](https
 <a name="c2"></a>\[2\] Revisiting Class Activation Mapping for Learning from Imperfect Data.  
 Wonho Bae<sup>\*</sup>, Junhyug Noh<sup>\*</sup>, **Jinhwan Seo**, Gunhee Kim  
 CVPRW 2020 - [paper](https://lidchallenge.github.io/papers/Track-3-1-lid_paper_snuvl.pdf) | [bibtex](/files/rcam.txt)
-  >### _TL;DR: Why does the output of weakly supervised object localization only highlight the discriminative part of the object? We investigated the phenomenon of part domination in weakly supervised learning and introduced effective ways to address it._  
+  >### TL;DR: Why does the output of weakly supervised object localization only highlight the discriminative part of the object? We investigated the phenomenon of part domination in weakly supervised learning and introduced effective ways to address it._  
 
 \[1\] Better to Follow, Follow to be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection.  
 Junhyug Noh, Wonho Bae, Wonhee Lee, **Jinhwan Seo**, Gunhee Kim  
