@@ -44,6 +44,6 @@ Professional Activities
 Honors & Awards
 ---
 * (10/2025) 1st place in Grounded VideoQA - [Perception Test](https://perception-test-challenge.github.io/) @ICCV2025
-* (09/2025) Recipient of NRF Ph.D. Fellowship, National Research Foundation of Korea
+* (09/2025) Recipient of Ph.D. Fellowship, National Research Foundation of Korea
 * (06/2020) 1st place in WSOL - [LID](https://lidchallenge.github.io/) @CVPR2020
 * (06/2020) 2nd place in WSOL - [LID](https://lidchallenge.github.io/) @CVPR2020
