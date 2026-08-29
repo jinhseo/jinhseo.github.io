@@ -27,21 +27,21 @@ window.GFD = {
     // Shown under the affiliations. Leave empty to hide.
     authorNote: '† Corresponding author',
     affiliation: 'Anonymous Submission',   // footer line
-    repo: 'https://github.com/USERNAME/groundformer',
-    arxiv: 'https://arxiv.org/abs/XXXX.XXXXX',
+    repo: 'https://github.com/jinhseo/groundformer',
+    arxiv: 'https://arxiv.org/abs/2608.15708',
     // Flip to true once the paper and code are public.
     released: true,
     links: [
       { label: 'Paper', kind: 'paper', href: '#', variant: 'solid', gated: true },
-      { label: 'arXiv', kind: 'arxiv', href: '#', variant: 'solid', gated: true },
-      { label: 'Code', kind: 'github', href: '#', variant: 'outline', gated: true },
+      { label: 'arXiv', kind: 'arxiv', href: 'https://arxiv.org/abs/2608.15708', variant: 'solid', gated: true },
+      { label: 'Code', kind: 'github', href: 'https://github.com/jinhseo/groundformer', variant: 'outline', gated: true },
     ],
   },
 
   // Plain-language framing of the problem, shown in the Motivation section.
   motivation: {
-    lead: 'Grounded VideoQA models answer the question but point at the wrong moment. GroundFormer makes the video representation depend on the question before localization happens, so different questions about one video land on different segments.',
-    body: 'We call the failure mode question-invariant grounding: three questions about three distinct events in the same video receive nearly identical temporal predictions. GroundFormer traces this to modality isolation and a weak question signal inside the grounding module, then removes both with learnable communication tokens and a MIL cross-attention that derives evidence from answer supervision alone.',
+    lead: 'Grounded VideoQA models answer the question well, yet they point at the same moment whatever the question asks.',
+    body: 'We call this failure mode question-invariant grounding: the model returns nearly the same segment regardless of the question. GroundFormer traces this to modality isolation and a weak question signal inside the grounding module, then removes both with learnable communication tokens and a MIL cross-attention that derives evidence from answer supervision alone.',
   },
 
   // Verbatim abstract, kept for reference.
@@ -58,44 +58,35 @@ window.GFD = {
   ],
 
   // Chips under the architecture figure.
-  components: [
-    { label: '[TYPE] token', color: 'var(--spectrum-1)' },
-    { label: 'query tokens ×32', color: 'var(--spectrum-3)' },
-    { label: 'linguistic transfer', color: 'var(--spectrum-4)' },
-    { label: 'visual refinement', color: 'var(--spectrum-5)' },
-    { label: 'MIL cross-attention', color: 'var(--spectrum-6)' },
-    { label: 'Gaussian kernel σ=2', color: 'var(--spectrum-7)' },
-  ],
 
   steps: [
-    { n: '01', title: 'Communication tokens', body: 'A small set of learnable tokens sits between the video and language branches. A [TYPE] token captures the coarse question category; 32 query tokens carry fine-grained question intent.' },
+    { n: '01', title: 'Communication tokens', body: 'A learnable tokens sits between the video and language branches. A [TYPE] token captures the coarse question category; 32 query tokens carry fine-grained question intent.' },
     { n: '02', title: 'Linguistic transfer', body: 'Asymmetric masked self-attention lets the tokens read the question and answer candidates while the language features stay uncontaminated.' },
     { n: '03', title: 'Visual refinement', body: 'The same tokens then write that intent into the video stream, so every frame feature already encodes what the question asks before grounding starts.' },
     { n: '04', title: 'MIL cross-attention', body: 'Token queries attend to video keys and values. The logits factorize into a temporal distribution and a candidate distribution whose product scores a candidate only when supporting frames agree, turning answer supervision into a grounding signal.' },
-    { n: '05', title: 'Gaussian refinement', body: 'MIL attention peaks on a few discriminative frames. A 1-D Gaussian kernel (σ=2) smooths the raw signal into one temporally coherent segment.' },
-    { n: '06', title: 'Two-pass training', body: 'A question pass and an answer pass share weights and drive a hierarchical V→Q→A contrastive loss. Only the answer pass runs at test time, so inference costs nothing extra.' },
   ],
 
   setup: [
-    { k: 'Vision encoder', v: 'frozen CLIP ViT-L/14, T = 32 frames' },
-    { k: 'Text encoder', v: 'frozen RoBERTa-base' },
+    { k: 'Vision encoder', v: 'CLIP ViT-L/14, T = 32 frames' },
+    { k: 'Text encoder', v: 'RoBERTa-base' },
     { k: 'GroundFormer block', v: '4 transformer layers, N = 32 query tokens' },
-    { k: 'Optimization', v: 'AdamW, lr 1e-5, cosine decay, 30 epochs, batch 16' },
-    { k: 'Hardware', v: 'RTX 3090 GPUs · 211M parameters' },
   ],
 
   // Why it matters.
   useCases: [
     { tag: '01', title: 'Evidence that follows the question', body: 'Pairwise IoU across questions in the same video drops from 85.7 (NG+) and 88.9 (CRA-GQA) to 28.2, close to the ground-truth 21.3. Correlation with the ground-truth overlap structure rises from ~0.005 to 0.121.' },
-    { tag: '02', title: 'Largest gains where timing decides the answer', body: 'Per-type Acc@GQA improves on all five NExT-GQA question types, and most on Temporal-When (+8.3) and Causal-How (+5.9), the types that demand locating a specific moment.' },
+    { tag: '02', title: 'Largest gains where the moment matters', body: 'Acc@GQA improves on all five NExT-GQA question types, most on Temporal-When (+8.3) and Causal-How (+5.9), the types that hinge on finding one moment.' },
     { tag: '03', title: 'No annotation, no inference overhead', body: 'Grounding is learned from candidate-level QA supervision alone, with no temporal labels during training, and the two-pass pipeline shares weights so test-time cost is unchanged.' },
   ],
+
+  // Introduces the second qualitative figure in the Results section.
+  consistencyNote: 'Questions that ask about the same event in different words land on the same interval, and the attention curve under each of them peaks in the same place.',
 
   figures: {
     teaser: {
       src: 'assets/teaser.png',
       alt: 'Three questions about one video and the temporal segments predicted by NG+, CRA-GQA and GroundFormer',
-      caption: 'Given one video and three questions targeting different moments, prior methods return nearly identical segments. GroundFormer produces three distinct segments, each aligned with the event that answers its question.',
+      caption: 'Given one video and three questions targeting different moments, prior methods return nearly identical segments.',
     },
     overview: {
       src: 'assets/overview.png',
@@ -107,10 +98,15 @@ window.GFD = {
       alt: 'GroundFormer architecture: linguistic transfer, visual refinement, MIL cross-attention',
       caption: 'Communication tokens absorb candidate semantics under an asymmetric mask, propagate that intent into the video tokens, and serve as queries in a factorized MIL cross-attention that yields candidate and temporal distributions.',
     },
+    consistency: {
+      src: 'assets/qual_2.png',
+      alt: 'Four questions on one video: two about the outdoor weather grounded early, two about the dog indoors grounded later',
+      caption: 'Four questions on one video. Q1 and Q2 ask about the outdoor weather and land on 1.7\u20134.2s and 1.2\u20135.7s; Q3 and Q4 ask about the dog indoors and both shift to 7.7\u201311.2s. The ground truth pairs them the same way, and the attention curve under each question shows the same split.',
+    },
     qualitative: {
-      src: 'assets/qualitative.png',
-      alt: 'Grounding for semantically similar questions: four questions on one video, two about the outdoor weather and two about the indoor dog',
-      caption: 'Four questions on one video. Q1 (windy flags) and Q2 (rain from the roof) both describe the outdoor weather, and GroundFormer grounds them in the early portion, 1.7–4.2s and 1.2–5.7s against a ground truth of 0.1–6.2s. Q3 (the dog stays indoors to stay dry) and Q4 (the dog sits after looking at the camera) target the later indoor event, and the prediction shifts to 7.7–11.2s against a ground truth of 7.2–11.7s. The attention curves below each pair show the same split. Grounding follows question semantics rather than collapsing onto one salient moment.',
+      src: 'assets/qual_1.png',
+      alt: 'Two videos with three questions each: GroundFormer predicts a distinct interval per question, shown above the ground-truth segments',
+      caption: 'Two videos, three questions each. Yellow marks GroundFormer\'s prediction, red the ground truth. The three intervals are distinct and ordered as in the ground truth: on the left, 1.7–8.2s, 3.2–6.7s and 19.7–26.2s against 1.0–5.5s, 3.7–6.0s and 18.2–24.7s.',
     },
   },
 

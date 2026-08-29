@@ -40,14 +40,10 @@ function Method() {
     <section id="method" style={{ padding: 'var(--section-pad-y) var(--section-pad-x)', background: 'var(--paper-soft)', borderTop: '1px solid var(--line)' }}>
       <div style={{ maxWidth: 'var(--measure-wide)', margin: '0 auto' }}>
         <SectionTitle index="02" kicker="Method" title="Let the question shape the video before grounding"
-          sub="Prior designs encode the two modalities independently and inject the question as a single token among 32 frames. GroundFormer routes question intent into the visual stream first, then reads temporal evidence out of answer supervision." />
+          />
 
         <Figure fig={Db.figures.details} />
 
-        <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '2.2rem', alignItems: 'center' }}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', marginRight: '0.4rem' }}>Components</span>
-          {Db.components.map((c) => <Chip key={c.label} color={c.color}>{c.label}</Chip>)}
-        </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(15rem, 1fr))', gap: '1.2rem' }}>
           {Db.steps.map((s) => (
@@ -182,10 +178,16 @@ function Results() {
   return (
     <section id="results" style={{ padding: 'var(--section-pad-y) var(--section-pad-x)', background: 'var(--paper)' }}>
       <div style={{ maxWidth: 'var(--measure-wide)', margin: '0 auto' }}>
-        <SectionTitle index="03" kicker="Results" title="Grouped when the questions agree, split when they do not"
-          sub="Questions about the same event land on the same interval; questions about a different event move to that event. On NExT-GQA and STAR, this evidence quality comes with better answering than prior grounded VideoQA methods." />
+        <SectionTitle index="03" kicker="Results" title="Each question, its own segment"
+          sub="Three questions about three different events in one video draw three distinct intervals, ordered as in the ground truth." />
 
         <Figure fig={Db.figures.qualitative} />
+
+        <p style={{
+          fontFamily: 'var(--font-sans)', fontSize: '1.05rem', lineHeight: 1.6,
+          color: 'var(--text-muted)', margin: '0 0 1.4rem', maxWidth: '46rem',
+        }}>{Db.consistencyNote}</p>
+        <Figure fig={Db.figures.consistency} />
 
         <ResultsTables />
       </div>
@@ -197,7 +199,7 @@ function UseCases() {
   return (
     <section id="analysis" style={{ padding: 'var(--section-pad-y) var(--section-pad-x)', background: 'var(--paper-soft)', borderTop: '1px solid var(--line)' }}>
       <div style={{ maxWidth: 'var(--measure-wide)', margin: '0 auto' }}>
-        <SectionTitle index="04" kicker="Analysis" title="What the numbers say"
+        <SectionTitle index="04" kicker="Analysis" title="Beyond the leaderboard"
           sub="Two metrics quantify question-invariance: pairwise IoU (PIoU) between predictions for different questions in one video, and the correlation between the ground-truth and predicted overlap structure." />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(16rem, 1fr))', gap: '1.2rem' }}>
           {Db.useCases.map((u) => (

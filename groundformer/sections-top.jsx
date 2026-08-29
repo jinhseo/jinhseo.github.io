@@ -9,7 +9,7 @@ const iconFor = { paper: I.paper, arxiv: I.arxiv, github: I.github, data: I.data
 function Wordmark({ size = '1.35rem', onDark }) {
   return (
     <span style={{ fontFamily: 'var(--font-serif)', fontSize: size, fontWeight: 500, letterSpacing: '-0.02em', color: onDark ? 'var(--text-on-dark)' : 'var(--text-strong)' }}>
-      <span style={{ fontStyle: 'italic', color: onDark ? 'var(--accent)' : 'var(--accent-ink)' }}>GroundFormer</span>
+      <span style={{color: onDark ? 'var(--accent)' : 'var(--accent-ink)' }}>GroundFormer</span>
     </span>
   );
 }
@@ -146,7 +146,7 @@ function Hero() {
           fontSize: 'var(--text-display)', lineHeight: 1.05, letterSpacing: '-0.022em',
           color: 'var(--text-strong)', margin: '0 auto 1rem', maxWidth: '18ch',
         }}>
-          <span style={{ fontStyle: 'italic', color: 'var(--accent-ink)' }}>GroundFormer</span>
+          <span style={{color: 'var(--accent-ink)' }}>GroundFormer</span>
         </h1>
         <p style={{
           fontFamily: 'var(--font-sans)', fontSize: 'clamp(1rem, 2vw, 1.18rem)', lineHeight: 1.5,
