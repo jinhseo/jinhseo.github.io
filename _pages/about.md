@@ -12,7 +12,7 @@ Hello:wave:, I am a 3rd-year Ph.D student in School of Computing at KAIST, advis
 
 I love a good story, whether it comes from a film or a book. My research brings this interest to video understanding, from short clips to full-length films and live streams, and from what a scene shows to what a story implies.
 My current research interests are:
-1. Long-form video understanding: narrative-level reasoning over films and series, with audio description as the main testbed.
+1. Long-form video understanding: narrative-level reasoning over films and series.
 2. Implicit meaning in video: interpreting metaphor across diverse video formats.
 3. Modeling time in video-language models: positional encoding for long and unbounded video.
 
@@ -30,7 +30,7 @@ Selected Publications
 ---
 <a name="c2"></a>\[3\] What You Ask is What You Ground: Bridging Question Intent to Temporal Evidence for Grounded VideoQA.  
 **Jinhwan Seo**, Kyubeom Han, Jumin Lee, Junhyug Noh<sup>\*</sup>, Sung-eui Yoon<sup>\*</sup>  
-ECCV 2022 - [paper](https://arxiv.org/abs/2608.15708) | [project page](https://jinhseo.github.io/groundformer/groundformer.html) | [code](https://github.com/jinhseo/GroundFormer)  
+ECCV 2026 - [paper](https://arxiv.org/abs/2608.15708) | [project page](https://jinhseo.github.io/groundformer/groundformer.html) | [code](https://github.com/jinhseo/GroundFormer)  
 
 <a name="c2"></a>\[2\] Object Discovery via Contrastive Learning for Weakly Supervised Object Detection.  
 **Jinhwan Seo**, Wonho Bae, Danica J. Sutherland, Junhyug Noh<sup>\*</sup>, Daijin Kim<sup>\*</sup>  
