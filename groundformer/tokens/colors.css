@@ -1,0 +1,114 @@
+/* ============================================================
+   GroundFormer — Color tokens
+   The brand is anchored on the ECCV 2026 (Malmö) logo: a single
+   blue in two weights, #1b7fc5 for the foreground skyline and
+   #a5d5f2 for the buildings behind it. The ramp below extends
+   that pair from near-black navy to pale sky and recurs as
+   gradients, rules and accents across the page.
+   Retinted from the MMDiff template's inferno palette.
+   ============================================================ */
+:root {
+  /* --- Spectrum: navy → ECCV blue → sky, 0=deep → 9=pale --- */
+  --spectrum-0: #030d17;
+  --spectrum-1: #082943;
+  --spectrum-2: #0d4068;
+  --spectrum-3: #12588c;
+  --spectrum-4: #1b7fc5;        /* ECCV logo blue */
+  --spectrum-5: #3d95d4;
+  --spectrum-6: #62aae0;
+  --spectrum-7: #86c1eb;
+  --spectrum-8: #a5d5f2;        /* ECCV logo light blue */
+  --spectrum-9: #d8ecfa;
+
+  /* The canonical gradient — use for hero rules, dividers,
+     "frozen → trained" emphasis, progress, focus accents. */
+  --gradient-spectrum: linear-gradient(
+    90deg,
+    var(--spectrum-1) 0%,
+    var(--spectrum-3) 26%,
+    var(--spectrum-4) 44%,
+    var(--spectrum-5) 60%,
+    var(--spectrum-6) 76%,
+    var(--spectrum-7) 90%,
+    var(--spectrum-8) 100%
+  );
+  /* Vertical variant for left rails / depth-map evocations. */
+  --gradient-spectrum-v: linear-gradient(
+    180deg,
+    var(--spectrum-1) 0%,
+    var(--spectrum-3) 30%,
+    var(--spectrum-4) 50%,
+    var(--spectrum-6) 78%,
+    var(--spectrum-8) 100%
+  );
+
+  /* --- Brand accents (pulled from the spectrum) --- */
+  --accent: #1b7fc5;            /* ECCV blue — primary accent */
+  --accent-ink: #105a90;        /* darker blue for text-on-light */
+  --accent-warm: #62aae0;       /* mid sky — secondary accent */
+  --accent-amber: #a5d5f2;      /* pale sky highlight */
+  --accent-deep: #082943;       /* deep navy — dark accent */
+
+  /* --- Neutrals: cool ink → paper --- */
+  --ink-950: #060d15;           /* "lab" near-black surface */
+  --ink-900: #101822;
+  --ink-800: #1c2530;
+  --ink-700: #2a343f;
+  --ink-600: #43505e;
+  --ink-500: #5a6775;           /* muted body / captions */
+  --ink-400: #828e9c;
+  --ink-300: #a9b4c0;
+  --ink-200: #d6dce4;
+  --ink-100: #e8edf2;
+  --ink-50:  #f2f6fa;
+
+  --paper:       #ffffff;
+  --paper-soft:  #f6f9fc;       /* alternating section bg */
+  --paper-warm:  #f9fbfd;       /* cool editorial paper */
+  --line:        #e4eaf0;       /* hairline border on light */
+  --line-strong: #cfd8e2;
+
+  /* On-dark hairlines & fills */
+  --line-dark:   rgba(255,255,255,0.10);
+  --fill-dark:   rgba(255,255,255,0.05);
+
+  /* --- Segmentation categoricals (PASCAL-style class colors) --- */
+  --seg-green:   #4f9d2f;
+  --seg-teal:    #1f9e96;
+  --seg-blue:    #2155cd;
+  --seg-violet:  #5b2d9e;
+  --seg-magenta: #c0327a;
+  --seg-amber:   #e0a020;
+  --seg-red:     #d62f2f;
+  --seg-salmon:  #d98c8c;
+
+  /* --- Saliency (the binary mask palette) --- */
+  --saliency-fg: #ffffff;
+  --saliency-bg: #000000;
+
+  /* --- Semantic status (frozen vs trained — the ❄/🔥 of the arch) --- */
+  --frozen:      #2f7df6;       /* frozen backbone — cool blue */
+  --frozen-soft: #e8f1ff;
+  --trained:     #ed6925;       /* trained head — warm orange */
+  --trained-soft:#fdeee3;
+
+  /* --- Semantic aliases (use these in components) --- */
+  --text-strong:   var(--ink-900);
+  --text-body:     var(--ink-800);
+  --text-muted:    var(--ink-500);
+  --text-faint:    var(--ink-400);
+  --text-on-dark:  #eef0f6;
+  --text-on-dark-muted: #a6abbb;
+  --text-accent:   var(--accent-ink);
+  --text-link:     var(--accent-ink);
+
+  --surface-page:  var(--paper);
+  --surface-alt:   var(--paper-soft);
+  --surface-card:  var(--paper);
+  --surface-lab:   var(--ink-950);   /* dark figure/hero surface */
+  --surface-inset: var(--ink-50);
+
+  --border-card:   var(--line);
+  --border-strong: var(--line-strong);
+  --focus-ring:    var(--accent);
+}

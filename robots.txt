@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /search-index.json
+Disallow: /playground-manifest.json
+
+Sitemap: https://jinhseo.github.io/sitemap-index.xml

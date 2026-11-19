@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Profile photo placeholder">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#faf6ec"/>
+      <stop offset="100%" stop-color="#e8dec6"/>
+    </radialGradient>
+  </defs>
+  <rect width="240" height="240" rx="120" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="112" fill="none" stroke="#b8a98a" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <!-- subtle sun/seal motif -->
+  <circle cx="170" cy="68" r="18" fill="#7d3a3a" opacity="0.16"/>
+  <!-- head & shoulders silhouette in warm ink -->
+  <circle cx="120" cy="94" r="34" fill="#4a4137"/>
+  <path d="M56 206 C56 158, 90 140, 120 140 C150 140, 184 158, 184 206" fill="#4a4137"/>
+  <!-- collar / book accent -->
+  <path d="M104 142 L120 168 L136 142" fill="none" stroke="#faf6ec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

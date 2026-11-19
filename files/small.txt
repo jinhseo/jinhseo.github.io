@@ -1,0 +1,7 @@
+@inproceedings{noh2019better,
+  title={Better to follow, follow to be better: Towards precise supervision of feature super-resolution for small object detection},
+  author={Noh, Junhyug and Bae, Wonho and Lee, Wonhee and Seo, Jinhwan and Kim, Gunhee},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={9725--9734},
+  year={2019}
+}

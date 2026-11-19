@@ -1,0 +1,31 @@
+# astro-inkstone
+
+> The Astro wiki you can write in — paper-and-ink typography for documentation sites, wikis and digital gardens, paired with astro-inkbrush for in-place editing. This site is the package's manual, written with the package itself.
+
+- Source: https://github.com/jinhseo
+- Editing engine: https://github.com/ventusff/astro-inkbrush
+- Try editing in the browser: https://jinhseo.github.io/kitchen-sink/
+
+## Manual
+
+- [MetaphorVU: Towards Metaphorical Video Understanding](https://jinhseo.github.io/metaphorvu-towards-metaphorical-video-understanding/)
+
+## Other languages
+
+- [Chinese (Simplified)](https://jinhseo.github.io/zh/)
+- [Japanese](https://jinhseo.github.io/ja/)
+- [Korean](https://jinhseo.github.io/ko/)
+- [German](https://jinhseo.github.io/de/)
+- [French](https://jinhseo.github.io/fr/)
+- [Spanish](https://jinhseo.github.io/es/)
+- [Portuguese (Brazil)](https://jinhseo.github.io/pt/)
+- [Italian](https://jinhseo.github.io/it/)
+- [Dutch](https://jinhseo.github.io/nl/)
+- [Polish](https://jinhseo.github.io/pl/)
+- [Russian](https://jinhseo.github.io/ru/)
+- [Ukrainian](https://jinhseo.github.io/uk/)
+- [Turkish](https://jinhseo.github.io/tr/)
+- [Vietnamese](https://jinhseo.github.io/vi/)
+- [Indonesian](https://jinhseo.github.io/id/)
+- [Thai](https://jinhseo.github.io/th/)
+- [Hindi](https://jinhseo.github.io/hi/)
